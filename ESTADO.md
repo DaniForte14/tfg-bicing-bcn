@@ -39,6 +39,14 @@ Encargo de A1, por fases:
     con MD5 distintos, antes de programar nada.
   - **1b** — programar a 15 min (conmensurable con el histórico, §5.1).
     Si su medición sugiere otro intervalo, lo propone; no lo cambia solo.
+  - **A1 para al cerrar la Fase 1.** La Fase 2 se lanza como sesión
+    aparte, con contexto limpio: es trabajo de volumen y una sesión larga
+    puede cortarse a mitad.
+  - **Commit al cierre de cada subfase**, con dos líneas al final del
+    cuerpo del mensaje: `Subfase cerrada: <id>` y `Siguiente: <id> — qué`.
+    El `git log` es el punto de retomada si una sesión se corta.
+
+Fase 2, pendiente de lanzar (sesión aparte):
   - **2a** — sonda de UN mes de `.7z`: columnas, solape de `station_id`
     con el vivo, tamaño en disco, mapeo de tipos de bici contra el feed
     `vehicle_types`. **Si el join no casa o no cabe, para ahí.**
