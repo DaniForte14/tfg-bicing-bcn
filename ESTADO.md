@@ -29,9 +29,21 @@ No hay entrega externa. Hitos orientativos:
 
 | Agente | Tarea | Rama / carpeta | Desde |
 |---|---|---|---|
-| — | — | — | — |
+| A1 | Fase 1: poller en Task Scheduler + medir cadencia real. Fase 2: histórico `.7z`, sonda de un mes y descarga completa | `master`, `src/` y `data/raw/` | 2026-09-10 |
 
-Ningún ejecutor activo. Límite §10: máximo 2 a la vez.
+1 de 2 ejecutores ocupados (§10). **No lanzar otro agente sobre `src/` o
+`data/raw/` mientras A1 esté vivo.**
+
+Encargo de A1, por fases:
+  - **1a** — explicar la anomalía de los tres snapshots separados 2 y 6 s
+    con MD5 distintos, antes de programar nada.
+  - **1b** — programar a 15 min (conmensurable con el histórico, §5.1).
+    Si su medición sugiere otro intervalo, lo propone; no lo cambia solo.
+  - **2a** — sonda de UN mes de `.7z`: columnas, solape de `station_id`
+    con el vivo, tamaño en disco, mapeo de tipos de bici contra el feed
+    `vehicle_types`. **Si el join no casa o no cabe, para ahí.**
+  - **2b** — solo si la sonda sale limpia: descarga completa y
+    normalización a `data/interim/`, registrando huecos según salen.
 
 ## Bloqueado
 
