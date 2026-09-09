@@ -1,0 +1,26 @@
+# Datos crudos: inmutables, pesados, se redescargan desde el origen.
+# CLAUDE.md §9 — data/raw/ nunca se edita.
+data/raw/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Notas personales
+CLAUDE.md
+# Secretos (API key de AEMET)
+.env
+
+# LaTeX
+memoria/*.aux
+memoria/*.log
+memoria/*.out
+memoria/*.toc
+memoria/*.bbl
+memoria/*.blg
+memoria/*.synctex.gz
+memoria/*.fdb_latexmk
+memoria/*.fls
